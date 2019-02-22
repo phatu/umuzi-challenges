@@ -1,0 +1,215 @@
+
+
+
+function one(a, b) {
+	
+	var a, b, sum = a + b, result;
+	
+	if(a == 65 || b == 65 || sum == 65) {
+		result = document.write("true");
+	}
+	
+	return result;
+}
+
+one(25,40);
+document.write("<br/>");
+two(7,8,9);
+document.write("<br/>");
+three(17,84,9);
+document.write("<br/>");
+four(71);
+document.write("<br/>");
+five("house", "computers");
+
+
+
+document.write("<br/>");
+
+
+function oneInput(){
+	var a = parseInt(document.getElementById("num1").value),
+		b = parseInt(document.getElementById("num2").value),
+		sum = a + b;
+	
+	if(a == 65 || b == 65 || sum == 65) {
+		result = alert("true");
+	}
+	
+	return result;
+}
+
+oneInput();
+
+
+function two(a,b,c) {
+	var a, b, c, semiperimeter, area, result;
+	
+	semiperimeter = (a + b + c)/2;
+	area = Math.sqrt(semiperimeter * ((semiperimeter-a) * (semiperimeter-b) * (semiperimeter-c)));
+	area = area.toFixed(2);
+	result = document.write(area);
+	return result;
+	
+}
+
+
+
+function twoInput() {
+	var a = parseInt(document.getElementById("num4").value),
+		b = parseInt(document.getElementById("num5").value),
+		c = parseInt(document.getElementById("num6").value),
+		 semiperimeter, 
+		 area, 
+		 result;
+	
+	semiperimeter = (a + b + c)/2;
+	area = Math.sqrt(semiperimeter * ((semiperimeter-a) * (semiperimeter-b) * (semiperimeter-c)));
+	area = area.toFixed(2);
+	result = alert(area);
+	
+	return result;
+}
+
+twoInput();
+
+
+
+function three(a,b,c) {
+	var a, b, c, result;
+	
+	if(a > b && a > c) {
+		result = a + " is bigger than " + b + " and " + c;
+	} else if (b > a && b > c) {
+		result = b + " is bigger than " + a + " and " + c;
+	} else if (c > a && c > b) {
+		result = c + " is bigger than " + a + " and " + b;
+	}
+		
+		return document.write(result);
+}
+
+
+
+
+function threeInput() {
+	var result,
+		a = parseInt(document.getElementById("num7").value),
+		b = parseInt(document.getElementById("num8").value),
+		c = parseInt(document.getElementById("num9").value);
+	
+	if(a > b && a > c) {
+		result = a + " is bigger than " + b + " and " + c;
+	} else if (b > a && b > c) {
+		result = b + " is bigger than " + a + " and " + c;
+	} else if (c > a && c > b) {
+		result = c + " is bigger than " + a + " and " + b;
+	}
+	
+	
+	return alert(result);
+}
+
+threeInput();
+
+
+
+function four(a) {
+	var a, hour, hours, minute, minutes, result;
+	
+	hour = a / 60;
+	hour = ~~(hour);
+	if (hour > 1) {
+		hours = "hours";
+	} else { 
+		hours = "hour"; }
+		
+	minute = a % 60;
+	if (minute > 1) {
+		minutes = "minutes";
+	} else { 
+		minutes = "minute"; }
+	
+	
+	
+	result = document.write(hour + " " + hours + ", " + minute + " " + minutes);
+	return result;
+}
+
+
+
+function fourInput() {
+	var a = parseInt(document.getElementById("num10").value),
+		hour, hours, minute, minutes, result;
+	
+	hour = a / 60;
+	hour = ~~(hour);
+	if (hour > 1) {
+		hours = "hours";
+	} else { 
+		hours = "hour"; }
+		
+	minute = a % 60;
+	if (minute > 1) {
+		minutes = "minutes";
+	} else { 
+		minutes = "minute"; }
+	
+	
+	
+	result = alert(hour + " " + hours + ", " + minute + " " + minutes);
+	return result;
+}
+
+fourInput();
+
+
+
+
+
+function five(one,two) {
+	var one, 
+		two,
+		result;
+		
+		one = one.toLowerCase();
+		two = two.toLowerCase();
+
+		for(var a=0; a<one.length; a++) {
+			for(var b=0; b<two.length; b++) {
+				if(one[a] == two[b]) {
+					result = document.write(two[b]);
+			}
+		}
+	}
+			
+		
+		return result;
+}
+
+
+
+function fiveInput() {
+	
+	var one = document.getElementById("word1").value,
+		two = document.getElementById("word2").value,
+		result;
+	
+		one = one.toLowerCase();
+		two = two.toLowerCase();
+
+		for(var a=0; a<one.length; a++) {
+			for(var b=0; b<two.length; b++) {
+				if(one[a] == two[b]) {
+					result = alert(two[b]);
+			}
+		}
+	}
+	
+	return result;
+}
+
+fiveInput();
+
+
+
